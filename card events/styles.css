@@ -1,0 +1,104 @@
+:root {
+  --dark-color: hsl(var(--hue), 100%, 9%);
+  --light-color: hsl(var(--hue), 95%, 98%);
+  --base: hsl(var(--hue), 95%, 50%);
+  --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
+  --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+  --font-family: "Poppins", system-ui;
+  --bg-gradient: linear-gradient(
+    to bottom,
+    hsl(var(--hue), 95%, 99%),
+    hsl(var(--hue), 95%, 84%)
+  );
+}
+
+body {
+  max-width: 1920px;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #d386f0; */
+  /* color: var(--dark-color);
+  background: var(--bg-gradient); */
+
+  background-image: radial-gradient(
+    circle farthest-corner at 0.8% 3.1%,
+    rgba(255, 188, 224, 1) 0%,
+    rgba(170, 165, 255, 1) 46%,
+    rgba(165, 255, 205, 1) 100%
+  );
+  background-size: contain;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  /* background-color: rgba(0, 0, 0, 0); */
+}
+
+header {
+  color: #fff;
+
+  text-align: center;
+  padding: 1rem;
+  perspective: 800px; /* Set the perspective for 3D effect */
+}
+
+header:hover {
+  transform: rotateX(20deg); /* Apply a 3D tilt effect on hover */
+  transition: transform 0.5s ease-out; /* Add smooth transition */
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.tec {
+  color: #fafafa;
+}
+
+.event-card {
+  /* background-image: radial-gradient(
+    circle farthest-corner at 0.8% 3.1%,
+    rgb(223, 187, 227) 0%,
+    rgb(134, 133, 155) 46%,
+    rgb(163, 178, 182) 100%
+  ); */
+  background: #ffffff60;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.7); /* Thunder blue glow effect on hover */
+}
+
+h2 {
+  color: #333;
+}
+
+.event-date {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  color: #555;
+  line-height: 1.4;
+}
+.orb-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
